@@ -87,7 +87,15 @@ p { text-wrap: pretty; }
   .nav__inner { position: relative; }
   .nav__links a:not(.nav__cta) { display: none; }
   .nav__menu { display: inline-flex; order: -1; margin-left: 0; }
-  .nav__brand { position: absolute; left: 50%; transform: translateX(-50%); }
+  .nav__brand { position: absolute; left: 50%; transform: translateX(-50%); font-size: 22px; }
+  /* The centered brand owns the bar: the CTA steps back to a quiet outline
+     (the hero's big gold button carries the download push). */
+  .nav__cta {
+    background: transparent; color: var(--zahav-bright) !important;
+    box-shadow: inset 0 0 0 1px var(--hairline-strong);
+    padding: 7px 14px !important; font-size: 15px;
+  }
+  .nav__cta:hover { background: rgba(201, 162, 87, 0.12); }
 }
 
 /* Mobile menu sheet: slides down beneath the sticky bar. */
