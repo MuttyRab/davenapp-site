@@ -60,9 +60,9 @@ p { text-wrap: pretty; }
   border-bottom: 1px solid var(--hairline);
 }
 .nav__inner { display: flex; align-items: center; gap: 28px; min-height: 64px; }
-.nav__brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; font-size: 21px; color: var(--klaf); }
+.nav__brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 900; font-size: 22px; color: var(--klaf); }
 .nav__brand:hover { text-decoration: none; }
-.nav__mark { width: 30px; height: 30px; border-radius: 8px; outline: 1px solid rgba(255, 255, 255, 0.1); outline-offset: -1px; }
+.nav__mark { width: 34px; height: 34px; border-radius: 8px; outline: 1px solid rgba(255, 255, 255, 0.1); outline-offset: -1px; }
 .nav__links { display: flex; gap: 22px; margin-left: auto; align-items: center; }
 .nav__links a { color: var(--afor); font-size: 15.5px; font-weight: 500; padding: 10px 2px; }
 .nav__links a:hover { color: var(--klaf); text-decoration: none; }
@@ -86,8 +86,11 @@ p { text-wrap: pretty; }
 @media (max-width: 720px) {
   .nav__inner { position: relative; }
   .nav__links a:not(.nav__cta) { display: none; }
-  .nav__menu { display: inline-flex; order: -1; margin-left: 0; }
-  .nav__brand { position: absolute; left: 50%; transform: translateX(-50%); font-size: 22px; }
+  /* Glyph (not the invisible 44px hit area) aligns to the 24px content edge. */
+  .nav__menu { display: inline-flex; order: -1; margin-left: -11px; }
+  /* Optically centered: the eye reads the TEXT as the brand, so the cluster
+     shifts left by half the icon+gap to put "Daven" on true center. */
+  .nav__brand { position: absolute; left: 50%; transform: translateX(calc(-50% - 22px)); font-size: 25px; }
   /* The centered brand owns the bar: the CTA steps back to a quiet outline
      (the hero's big gold button carries the download push). */
   .nav__cta {
