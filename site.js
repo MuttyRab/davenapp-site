@@ -20,6 +20,24 @@
 // Footer year.
 document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = String(new Date().getFullYear()); });
 
+// Mobile menu: the hamburger toggles the sheet; any link tap, outside tap,
+// or Escape closes it.
+(function menu() {
+  const button = document.querySelector('.nav__menu');
+  const sheet = document.getElementById('nav-sheet');
+  if (!button || !sheet) return;
+  const setOpen = (open) => {
+    sheet.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+  };
+  button.addEventListener('click', () => setOpen(sheet.hidden));
+  sheet.addEventListener('click', (event) => { if (event.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', (event) => {
+    if (!sheet.hidden && !event.target.closest('.nav')) setOpen(false);
+  });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setOpen(false); });
+})();
+
 // Contact form → the Daven contact endpoint. The message is emailed to the
 // developer; replies go to the address the sender enters.
 (function contact() {
