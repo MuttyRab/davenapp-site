@@ -76,7 +76,8 @@ p { text-wrap: pretty; }
 .nav__cta:active { transform: scale(0.96); }
 .nav__menu {
   display: none; border: 0; cursor: pointer; margin-left: auto;
-  width: 44px; height: 44px; border-radius: 12px; background: transparent;
+  -webkit-appearance: none; appearance: none; -webkit-tap-highlight-color: transparent;
+  width: 44px; height: 44px; border-radius: 12px; background: transparent; padding: 0;
   color: var(--klaf); align-items: center; justify-content: center;
   transition-property: transform, background-color; transition-duration: 160ms; transition-timing-function: ease-out;
 }
