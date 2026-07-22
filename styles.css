@@ -60,7 +60,7 @@ p { text-wrap: pretty; }
   border-bottom: 1px solid var(--hairline);
 }
 .nav__inner { display: flex; align-items: center; gap: 28px; min-height: 64px; }
-.nav__brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 21px; color: var(--klaf); }
+.nav__brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; font-size: 21px; color: var(--klaf); }
 .nav__brand:hover { text-decoration: none; }
 .nav__mark { width: 30px; height: 30px; border-radius: 8px; outline: 1px solid rgba(255, 255, 255, 0.1); outline-offset: -1px; }
 .nav__links { display: flex; gap: 22px; margin-left: auto; align-items: center; }
@@ -84,9 +84,10 @@ p { text-wrap: pretty; }
 .nav__menu:active { transform: scale(0.96); }
 .nav__menu svg { display: block; }
 @media (max-width: 720px) {
+  .nav__inner { position: relative; }
   .nav__links a:not(.nav__cta) { display: none; }
-  .nav__menu { display: inline-flex; }
-  .nav__links { margin-left: 0; }
+  .nav__menu { display: inline-flex; order: -1; margin-left: 0; }
+  .nav__brand { position: absolute; left: 50%; transform: translateX(-50%); }
 }
 
 /* Mobile menu sheet: slides down beneath the sticky bar. */
@@ -149,7 +150,7 @@ html.js .nav__sheet:not([hidden]) { animation: sheet-in 200ms ease-out; }
 .cta-note { color: var(--muted); font-size: 14px; }
 
 /* the phone: straight, floated on layered shadow, visible bezel.
-   The screenshot is cropped to a fixed 390:660 window (object-fit: cover),
+   The screenshot is held to a true iPhone 390:844 ratio (object-fit: cover),
    so it can never distort — whatever a browser does with sizing. */
 .phone {
   width: min(300px, 74vw); margin: 0 auto; border-radius: 44px; padding: 12px;
@@ -157,7 +158,7 @@ html.js .nav__sheet:not([hidden]) { animation: sheet-in 200ms ease-out; }
   box-shadow: var(--shadow-float), 0 0 0 1.5px rgba(255, 255, 255, 0.16), 0 0 0 5px rgba(0, 0, 0, 0.4);
 }
 .phone img {
-  width: 100%; height: auto; aspect-ratio: 390 / 660;
+  width: 100%; height: auto; aspect-ratio: 390 / 844;
   object-fit: cover; object-position: top;
   border-radius: 32px; outline: 1px solid rgba(255, 255, 255, 0.1); outline-offset: -1px;
 }
