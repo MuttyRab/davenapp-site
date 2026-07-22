@@ -74,9 +74,41 @@ p { text-wrap: pretty; }
 }
 .nav__cta:hover { background: var(--zahav-bright); text-decoration: none; }
 .nav__cta:active { transform: scale(0.96); }
+.nav__menu {
+  display: none; border: 0; cursor: pointer; margin-left: auto;
+  width: 44px; height: 44px; border-radius: 12px; background: transparent;
+  color: var(--klaf); align-items: center; justify-content: center;
+  transition-property: transform, background-color; transition-duration: 160ms; transition-timing-function: ease-out;
+}
+.nav__menu:active { transform: scale(0.96); }
+.nav__menu svg { display: block; }
 @media (max-width: 720px) {
   .nav__links a:not(.nav__cta) { display: none; }
+  .nav__menu { display: inline-flex; }
+  .nav__links { margin-left: 0; }
 }
+
+/* Mobile menu sheet: slides down beneath the sticky bar. */
+.nav__sheet {
+  position: absolute; left: 0; right: 0; top: 100%;
+  background: color-mix(in srgb, var(--ink) 97%, transparent);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--hairline-strong);
+  padding: 8px 24px 18px; display: grid;
+}
+.nav__sheet[hidden] { display: none; }
+.nav__sheet a {
+  color: var(--klaf); font-size: 17px; font-weight: 600; text-decoration: none;
+  min-height: 50px; display: flex; align-items: center;
+  border-bottom: 1px solid var(--hairline);
+}
+.nav__sheet a:last-child { border-bottom: 0; color: var(--zahav-bright); }
+html.js .nav__sheet:not([hidden]) { animation: sheet-in 200ms ease-out; }
+@keyframes sheet-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) { html.js .nav__sheet:not([hidden]) { animation: none; } }
 
 /* ── The siddur-page hero ───────────────────────────────────── */
 .hero { padding: 84px 0 64px; overflow: hidden; }
