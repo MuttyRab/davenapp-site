@@ -40,7 +40,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: var(--zahav-bright); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 :focus-visible { outline: 2px solid var(--zahav); outline-offset: 3px; border-radius: 4px; }
@@ -120,7 +120,7 @@ p { text-wrap: pretty; }
   width: min(320px, 78vw); margin: 0 auto; border-radius: 44px; padding: 10px;
   background: #060806; box-shadow: var(--shadow-float), 0 0 0 1px rgba(255, 255, 255, 0.07);
 }
-.phone img { border-radius: 36px; outline: 1px solid rgba(255, 255, 255, 0.08); outline-offset: -1px; }
+.phone img { width: 100%; height: auto; border-radius: 36px; outline: 1px solid rgba(255, 255, 255, 0.08); outline-offset: -1px; }
 
 /* ── Colophon strip (real numbers, set like a printer's line) ─ */
 .colophon { border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); padding: 26px 0; }
