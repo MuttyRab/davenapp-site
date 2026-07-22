@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add("js")</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daven — the siddur that knows what today is</title>
+  <meta name="description" content="A complete offline siddur for iPhone that adapts to the Jewish calendar: Rosh Chodesh, Chanukah, fast days. Four nusachim, zmanim with real opinions, beautifully typeset." />
+  <link rel="icon" href="assets/icon-64.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:title" content="Daven — the siddur that knows what today is" />
+  <meta property="og:description" content="A complete offline siddur that adapts to the Jewish calendar. Beautifully typeset, private by design." />
+  <meta property="og:image" content="https://davenapp.com/assets/icon-512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/"><img class="nav__mark" src="assets/icon-64.png" alt="" width="30" height="30" />Daven</a>
+    <nav class="nav__links" aria-label="Site">
+      <a href="#features">Features</a>
+      <a href="#premium">Premium</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav__cta" href="https://apps.apple.com/app/id6791022012">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- The hero is set like a page of the siddur itself: the reader's gold
+       section mark, the Hebrew line, then its translation line beneath. -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="mark rise">מוֹדֶה אֲנִי</p>
+        <h1 class="hero__hebrew rise" lang="he">סִדּוּר<br /><em>שֶׁיּוֹדֵעַ אֵיזֶה יוֹם הַיּוֹם</em></h1>
+        <p class="hero__title rise">The siddur that knows what today is.</p>
+        <p class="hero__sub rise">Rosh Chodesh, Chanukah, a fast day, motzei Shabbos — Daven sets the right tefillah automatically. A complete offline library in four nusachim, typeset like a sefer you would actually want to hold.</p>
+        <div class="cta-row rise">
+          <a class="btn btn--gold" href="https://apps.apple.com/app/id6791022012">Download for iPhone</a>
+          <span class="cta-note">Free siddur &amp; all 150 Tehillim · launching soon on the App&nbsp;Store</span>
+        </div>
+      </div>
+      <figure class="phone rise"><img src="assets/shot-today.png" alt="Daven's Today screen: the evening service ready to begin, today's Hebrew date, and the next zman." width="780" height="1688" /></figure>
+    </div>
+  </section>
+
+  <section class="colophon" aria-label="Library size">
+    <div class="wrap colophon__row rise">
+      <div class="stat"><b>159</b><span>prayer collections</span></div>
+      <div class="stat"><b>18,603</b><span>passages offline</span></div>
+      <div class="stat"><b>4</b><span>nusachim</span></div>
+      <div class="stat"><b>13</b><span>zmanim opinions</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section__head rise">
+        <p class="mark mark--center">הַסִּדּוּר</p>
+        <h2>Open. Daven. Done.</h2>
+        <p>No menus to dig through and no wrong page — the day's davening is one tap from the moment the app opens.</p>
+      </div>
+
+      <div class="feature rise">
+        <div class="feature__copy">
+          <p class="mark">תְּפִלָּה</p>
+          <h3>A siddur that follows the calendar</h3>
+          <p>The Smart Siddur builds today's complete service — and only today's.</p>
+          <ul>
+            <li>Ya'aleh V'yavo, Al HaNissim, and seasonal insertions appear exactly on their days</li>
+            <li>Hallel and Musaf are stitched in on Rosh Chodesh — nothing to find, nothing to skip</li>
+            <li>Minyan-only parts fold away when you daven alone</li>
+            <li>Available English translation and full transliteration, side by side</li>
+          </ul>
+        </div>
+        <figure class="phone"><img src="assets/shot-reader.png" alt="The Daven reader: Minchah with vocalized Hebrew, a gold section mark, and English translation." loading="lazy" width="780" height="1688" /></figure>
+      </div>
+
+      <div class="feature feature--flip rise">
+        <div class="feature__copy">
+          <p class="mark">זְמַנִּים</p>
+          <h3>Zmanim with the reasoning attached</h3>
+          <p>Every time states its method — and you choose the opinion.</p>
+          <ul>
+            <li>Dawn to nightfall for wherever you are, calculated on your device</li>
+            <li>GRA, Magen Avraham, Baal HaTanya, Rabbeinu Tam, and more</li>
+            <li>Times follow you when you travel, or stay pinned to your city</li>
+          </ul>
+        </div>
+        <figure class="phone"><img src="assets/shot-zmanim.png" alt="Daven's zmanim list: each time with its Hebrew name and the halachic method it uses." loading="lazy" width="780" height="1688" /></figure>
+      </div>
+
+      <div class="feature rise">
+        <div class="feature__copy">
+          <p class="mark">לוּחַ</p>
+          <h3>The Hebrew calendar, kept for you</h3>
+          <p>Dates, parsha, and the people you remember.</p>
+          <ul>
+            <li>Holidays, Rosh Chodesh, and the weekly parsha at a glance</li>
+            <li>Yahrzeits, Hebrew birthdays, and anniversaries — tracked correctly through leap years</li>
+            <li>Sync candle-lighting and your personal dates to your phone's calendar</li>
+          </ul>
+        </div>
+        <figure class="phone"><img src="assets/shot-calendar.png" alt="Daven's calendar: the Hebrew month with holidays and personal dates." loading="lazy" width="780" height="1688" /></figure>
+      </div>
+
+      <div class="grid" style="margin-top:40px">
+        <div class="card rise"><span class="card__hebrew">בְּלִי רֶשֶׁת</span><h3>Fully offline</h3><p>Every prayer, calculation, and note works with no connection at all.</p></div>
+        <div class="card rise"><span class="card__hebrew">חִפּוּשׂ</span><h3>Search that forgives</h3><p>English, Hebrew, topics, occasions — typos and all.</p></div>
+        <div class="card rise"><span class="card__hebrew">רָשׁוּם</span><h3>Notes &amp; bookmarks</h3><p>Private notes on any passage, progress that remembers where you were.</p></div>
+        <div class="card rise"><span class="card__hebrew">שַׁבָּת</span><h3>Rests when you rest</h3><p>On Shabbos and Yom Tov the app steps aside — by design.</p></div>
+        <div class="card rise"><span class="card__hebrew">תְּפִלִּין</span><h3>Tefillin mirror</h3><p>A live, on-device camera preview. Nothing recorded, ever.</p></div>
+        <div class="card rise"><span class="card__hebrew">פְּרָטִי</span><h3>Private by design</h3><p>No ads, no data sale, no tracking. Your davening is yours.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="premium">
+    <div class="wrap">
+      <div class="section__head rise">
+        <p class="mark mark--center">פְּרֶמִיוּם</p>
+        <h2>The daily siddur stays free. Forever.</h2>
+        <p>Premium adds translation &amp; transliteration, the specialty library, cross-device sync, Tehillim cycles, and thirteen side-by-side zmanim calculations.</p>
+      </div>
+      <div class="plans rise">
+        <div class="plan plan--featured">
+          <span class="plan__badge">BEST VALUE</span>
+          <span class="plan__name">Lifetime</span>
+          <span class="plan__price">$79.99 <small>once</small></span>
+          <p class="plan__note">Buy Premium once, like a siddur. Every Premium feature, yours forever.</p>
+        </div>
+        <div class="plan">
+          <span class="plan__name">Annual</span>
+          <span class="plan__price">$29.99 <small>/ year</small></span>
+          <p class="plan__note">7-day free trial for eligible new subscribers.</p>
+        </div>
+        <div class="plan">
+          <span class="plan__name">Monthly</span>
+          <span class="plan__price">$3.99 <small>/ month</small></span>
+          <p class="plan__note">Cancel anytime in your Apple&nbsp;ID settings.</p>
+        </div>
+      </div>
+      <p class="plans-foot">Billed through Apple. Subscriptions renew automatically unless canceled at least 24 hours before the period ends.</p>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap wrap--narrow">
+      <div class="section__head rise">
+        <p class="mark mark--center">שְׁאֵלוֹת</p>
+        <h2>Questions, answered</h2>
+      </div>
+      <div class="faq-list rise">
+        <details class="faq-item"><summary>Does Daven work offline?</summary><div class="faq-body"><p>Yes. Prayer content, calendar logic, saved preferences, bookmarks, notes, and core zmanim all work without a network connection.</p></div></details>
+        <details class="faq-item"><summary>Which nusachim are included?</summary><div class="faq-body"><p>Ashkenaz, Sefard, Edot Mizrach, and Chabad — and the whole library truly changes with your setting, not just the Amidah.</p></div></details>
+        <details class="faq-item"><summary>Is an account required?</summary><div class="faq-body"><p>No. An account exists only for optional cross-device sync of your preferences and personal content.</p></div></details>
+        <details class="faq-item"><summary>Why is a zman different from my shul calendar?</summary><div class="faq-body"><p>Methods and location assumptions can differ. Check the selected city and the Israel/Diaspora setting — then follow your community calendar and local halachic authority.</p></div></details>
+      </div>
+      <p style="text-align:center;margin-top:26px"><a href="faq.html">All questions &amp; answers →</a></p>
+    </div>
+  </section>
+
+  <section class="closer">
+    <div class="wrap">
+      <p class="hero__hebrew rise" lang="he">פִּתְחוּ וְהִתְפַּלְּלוּ</p>
+      <p class="rise">Open, and daven. The rest is set for you.</p>
+      <div class="cta-row rise" style="justify-content:center">
+        <a class="btn btn--gold" href="https://apps.apple.com/app/id6791022012">Download for iPhone</a>
+        <a class="btn btn--ghost" href="contact.html">Suggest a feature</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">Daven<span>A complete, day-aware siddur for iPhone. Free to daven, forever.</span></div>
+    <nav aria-label="Footer">
+      <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <p class="footer__legal">© <span data-year>2026</span> Daven · davenapp.com. Apple and the App Store are trademarks of Apple Inc. Calendar and zmanim calculations vary by method and community custom — follow your local halachic authority.</p>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+</body>
+</html>
