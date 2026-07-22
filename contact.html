@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add("js")</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Daven</title>
+  <meta name="description" content="Send the Daven developer a suggestion, complaint, or question. Every message is read." />
+  <link rel="icon" href="assets/icon-64.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/"><img class="nav__mark" src="assets/icon-64.png" alt="" width="30" height="30" />Daven</a>
+    <nav class="nav__links" aria-label="Site">
+      <a href="/#features">Features</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="nav__cta" href="https://apps.apple.com/app/id6791022012">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section" style="padding-bottom:88px">
+  <div class="wrap wrap--narrow">
+    <div class="section__head rise in">
+      <p class="mark mark--center">צור קשר</p>
+      <h2>Tell us what to fix — or what to build</h2>
+      <p>Every message lands directly with the developer, and the reply goes to the email you enter. Complaints are as welcome as compliments; they make the app better.</p>
+    </div>
+
+    <form class="form" id="contact-form" novalidate>
+      <div class="chip-row" role="group" aria-label="What is this about?">
+        <button type="button" class="chip" data-kind="suggestion" aria-pressed="true">Suggestion</button>
+        <button type="button" class="chip" data-kind="complaint" aria-pressed="false">Complaint</button>
+        <button type="button" class="chip" data-kind="question" aria-pressed="false">Question</button>
+        <button type="button" class="chip" data-kind="billing" aria-pressed="false">Billing &amp; refunds</button>
+      </div>
+
+      <div class="field">
+        <label for="email">Your email — replies go here</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="you@example.com" />
+      </div>
+
+      <div class="field">
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" required minlength="10" placeholder="What happened, or what would make Daven better? The more specific, the faster we can act on it."></textarea>
+      </div>
+
+      <div class="hp" aria-hidden="true">
+        <label for="website">Leave this field empty</label>
+        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <p class="form__error" role="alert"></p>
+      <div><button class="btn btn--gold" type="submit">Send message</button></div>
+      <p class="cta-note">For billing, note: purchases are handled by Apple — refunds are requested at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> and subscriptions are canceled in <a href="https://apps.apple.com/account/subscriptions">Apple&nbsp;ID settings</a>. We can point you the right way, but Apple makes those calls.</p>
+    </form>
+
+    <div class="form__success" id="contact-success" hidden>
+      <p class="mark mark--center">נִשְׁלַח</p>
+      <h3>Message sent</h3>
+      <p>Thank you — it's already in the developer's inbox. A reply will come to the email you entered.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">Daven<span>A complete, day-aware siddur for iPhone. Free to daven, forever.</span></div>
+    <nav aria-label="Footer">
+      <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <p class="footer__legal">© <span data-year>2026</span> Daven · davenapp.com</p>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+</body>
+</html>
