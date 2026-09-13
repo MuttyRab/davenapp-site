@@ -124,7 +124,7 @@ html.js .nav__sheet:not([hidden]) { animation: sheet-in 200ms ease-out; }
 @media (prefers-reduced-motion: reduce) { html.js .nav__sheet:not([hidden]) { animation: none; } }
 
 /* ── The siddur-page hero ───────────────────────────────────── */
-.hero { padding: 84px 0 64px; overflow: hidden; }
+.hero { padding: 56px 0 56px; overflow: hidden; }
 .hero__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 56px; align-items: center; }
 @media (max-width: 900px) { .hero__grid { grid-template-columns: 1fr; gap: 48px; } }
 
@@ -139,7 +139,7 @@ html.js .nav__sheet:not([hidden]) { animation: sheet-in 200ms ease-out; }
 
 .hero__hebrew {
   font-family: var(--serif); font-weight: 500; color: var(--klaf);
-  font-size: clamp(64px, 9vw, 108px); line-height: 1.28; direction: rtl;
+  font-size: clamp(48px, 6.2vw, 78px); line-height: 1.2; direction: rtl;
   margin: 18px 0 6px;
 }
 .hero__hebrew em { font-style: normal; color: var(--zahav-bright); }
@@ -349,3 +349,7 @@ html.js .rise:not(.in) { opacity: 0; transform: translateY(12px); }
   .share-card { padding: 24px; }
   .share-card .btn { padding: 12px 20px; }
 }
+
+/* A hidden success state or form must stay hidden despite display rules. */
+[hidden] { display: none !important; }
+@media (max-width: 540px) { .hero { padding-top: 36px; } }
