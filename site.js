@@ -1,4 +1,5 @@
 // Daven · davenapp.com — shared behavior for every page.
+document.documentElement.classList.add('js');
 
 // Reveal-on-scroll: elements marked .rise fade up once, 240ms, ease-out.
 (function reveals() {
@@ -64,9 +65,12 @@ document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = Stri
     if (message.length < 10) { errorEl.textContent = 'Add a little more detail so we can help.'; form.message.focus(); return; }
     button.disabled = true;
     button.textContent = 'Sending…';
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 12000);
     try {
       const res = await fetch(ENDPOINT, {
         method: 'POST',
+        signal: controller.signal,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ kind, email, message, website: form.website.value }),
       });
@@ -75,9 +79,41 @@ document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = Stri
       form.hidden = true;
       document.getElementById('contact-success').hidden = false;
     } catch (err) {
-      errorEl.textContent = err instanceof Error ? err.message : 'The message could not be sent right now — please try again shortly.';
+      errorEl.textContent = err instanceof Error && err.name !== 'AbortError' ? err.message : 'The connection timed out. Try again or use the email link below.';
       button.disabled = false;
       button.textContent = 'Send message';
+    } finally {
+      clearTimeout(timeout);
     }
   });
+})();
+
+// Sharing is always initiated by the visitor. No contacts are read or sent.
+(function sharing() {
+  const message = document.getElementById('share-message');
+  if (!message) return;
+  const status = document.getElementById('share-status');
+  const copy = document.querySelector('[data-copy-share]');
+  const share = document.querySelector('[data-share]');
+  copy.hidden = false;
+  copy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(message.value);
+      status.textContent = 'Message copied. Paste it into a conversation you choose.';
+    } catch {
+      message.focus();
+      message.select();
+      status.textContent = 'Select and copy the highlighted message.';
+    }
+  });
+  if (navigator.share) {
+    share.hidden = false;
+    share.addEventListener('click', async () => {
+      try {
+        await navigator.share({ title: 'Daven — a free siddur for iPhone', text: message.value });
+      } catch (error) {
+        if (error.name !== 'AbortError') status.textContent = 'Sharing is unavailable here. You can copy the message instead.';
+      }
+    });
+  }
 })();

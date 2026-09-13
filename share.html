@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Share Daven — A Free Siddur for iPhone</title>
+  <meta name="description" content="Share Daven with a friend or your community: free daily prayers, all 150 Tehillim, four nusachim and offline use." />
+  <link rel="canonical" href="https://davenapp.com/share.html" />
+  <meta name="apple-itunes-app" content="app-id=6791022012" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://davenapp.com/share.html" />
+  <meta property="og:title" content="Share Daven — A Free Siddur for iPhone" />
+  <meta property="og:description" content="Share Daven with a friend or your community: free daily prayers, all 150 Tehillim, four nusachim and offline use." />
+  <meta property="og:image" content="https://davenapp.com/assets/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="assets/icon-64.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=8" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="/"><img class="nav__mark" src="assets/icon-64.png" alt="" width="30" height="30" />Daven</a>
+      <button class="nav__menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-sheet">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    <nav class="nav__links" aria-label="Site">
+      <a href="/#features">Features</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav__cta" href="https://apps.apple.com/app/id6791022012">Get the app</a>
+    </nav>
+  </div>
+    <nav class="nav__sheet" id="nav-sheet" hidden aria-label="Menu">
+      <a href="/#features">Features</a>
+      <a href="/#premium">Premium</a>
+      <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="https://apps.apple.com/app/id6791022012">Get the app</a>
+    </nav>
+</header>
+
+<main class="section share-page">
+  <div class="wrap wrap--narrow">
+    <div class="section__head">
+      <p class="mark mark--center" lang="he" dir="rtl">תְּפִלָּה</p>
+      <h1>A siddur to pass along.</h1>
+      <p>Someone you know could use a quieter place to daven. Send them Daven: the daily siddur and all 150 Tehillim are free.</p>
+    </div>
+    <div class="share-card">
+      <img class="share-icon" src="assets/icon-512.png" width="88" height="88" alt="Daven app icon" />
+      <h2>Four nusachim. Ready offline.</h2>
+      <p>Ashkenaz, Sefard, Edot Mizrach and Chabad. A daily service that follows the Jewish calendar, with local zmanim. No account needed to start.</p>
+      <a class="btn btn--gold" href="https://apps.apple.com/app/id6791022012">Get Daven free for iPhone</a>
+      <p class="cta-note">Optional Premium features and in-app purchases. Downloading doesn’t start a subscription.</p>
+    </div>
+    <div class="share-actions">
+      <h2>Make someone’s next tefillah easier</h2>
+      <p>Send a personal message, or share in a community that welcomes app recommendations.</p>
+      <label for="share-message">A message you can copy</label>
+      <textarea id="share-message" readonly rows="5">Daven is a free offline siddur for iPhone: four nusachim, daily prayers, all 150 Tehillim and local zmanim. No account needed. https://davenapp.com/?utm_source=friend&amp;utm_medium=share&amp;utm_campaign=free_siddur</textarea>
+      <div class="cta-row">
+        <button class="btn btn--gold" type="button" data-share hidden>Share Daven</button>
+        <button class="btn btn--ghost" type="button" data-copy-share hidden>Copy message</button>
+      </div>
+      <p id="share-status" role="status" aria-live="polite"></p>
+      <noscript><p>Select and copy the message above to share it.</p></noscript>
+    </div>
+    <p class="share-guide">New to Daven? <a href="siddur-for-iphone.html">See what’s free and how to get started.</a></p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">Daven<span>A complete, day-aware siddur for iPhone. Free to daven, forever.</span></div>
+    <nav aria-label="Footer">
+      <a href="share.html">Share Daven</a>
+      <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <p class="footer__legal">© <span data-year>2026</span> Daven · davenapp.com</p>
+  </div>
+</footer>
+
+<script src="site.js?v=8" defer></script>
+</body>
+</html>

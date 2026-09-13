@@ -231,6 +231,8 @@ html.js .nav__sheet:not([hidden]) { animation: sheet-in 200ms ease-out; }
 .plan__price { font-family: var(--serif); font-size: 34px; font-variant-numeric: tabular-nums; }
 .plan__price small { font-family: var(--sans); font-size: 15px; color: var(--afor); }
 .plan__note { color: var(--afor); font-size: 15px; }
+.plan .btn { margin-top: auto; justify-content: center; text-align: center; padding: 12px 18px; }
+.plan__note:last-of-type { margin-bottom: 16px; }
 .plans-foot { text-align: center; color: var(--muted); font-size: 14px; margin-top: 22px; max-width: 62ch; margin-left: auto; margin-right: auto; }
 
 /* ── FAQ ────────────────────────────────────────────────────── */
@@ -321,4 +323,29 @@ html.js .rise:not(.in) { opacity: 0; transform: translateY(12px); }
 @media (prefers-reduced-motion: reduce) {
   .rise { opacity: 1; transform: none; transition: none; }
   .btn, .chip, .nav__cta, .card, .faq-item summary::after { transition: none; }
+}
+
+.section__head h1 { font-size: clamp(34px, 5vw, 48px); margin: 14px 0 18px; }
+.section__head .btn { margin-top: 24px; }
+.share-card { display: grid; gap: 20px; justify-items: start; padding: 32px; background: var(--tzel); border: 1px solid var(--hairline-strong); border-radius: var(--radius-lg); }
+.share-icon { border-radius: 20px; }
+.share-card h2, .share-actions h2, .guide-copy h2 { font-size: 28px; }
+.share-card p, .share-actions p, .guide-copy p, .guide-copy li, .share-guide { color: var(--afor); }
+.share-actions { margin-top: 48px; display: grid; gap: 16px; }
+.share-actions label { font-weight: 600; }
+.share-actions textarea { width: 100%; resize: vertical; padding: 18px; border: 1px solid var(--hairline-strong); border-radius: var(--radius-md); background: var(--tzel); color: var(--klaf); font: inherit; line-height: 1.5; }
+.share-actions [hidden] { display: none; }
+#share-status { min-height: 1.6em; }
+.share-guide { margin-top: 20px; }
+.guide-copy { margin-top: 48px; }
+.guide-copy h2 { margin: 36px 0 14px; }
+.guide-copy p, .guide-copy ol { margin-bottom: 20px; }
+.guide-copy ol { padding-left: 24px; }
+.guide-copy li { margin-bottom: 14px; padding-left: 6px; }
+.support-fallback { margin: 24px 0; color: var(--afor); overflow-wrap: anywhere; }
+.support-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 540px) {
+  .support-grid { grid-template-columns: 1fr; }
+  .share-card { padding: 24px; }
+  .share-card .btn { padding: 12px 20px; }
 }
