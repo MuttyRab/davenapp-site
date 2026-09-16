@@ -1,0 +1,7 @@
+/* Scoped to the optional video on the sharing page. */
+.share-video { display: grid; gap: 18px; margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--hairline-strong); }
+.share-video h2 { font-size: 28px; }
+.share-video p { color: var(--afor); }
+.share-video video { display: block; width: 100%; max-width: 360px; height: auto; aspect-ratio: 9 / 16; border: 1px solid var(--hairline-strong); border-radius: var(--radius-md); background: var(--ink); }
+.share-video summary { color: var(--zahav-bright); cursor: pointer; padding: 8px 0; }
+.share-video details p { padding-top: 12px; }

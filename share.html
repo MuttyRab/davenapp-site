@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="assets/share-video.css?v=1" />
 </head>
 <body>
 
@@ -73,6 +74,21 @@
       <p id="share-status" role="status" aria-live="polite"></p>
       <noscript><p>Select and copy the message above to share it.</p></noscript>
     </div>
+    <section class="share-video" aria-labelledby="share-video-title">
+      <h2 id="share-video-title">A short introduction to share</h2>
+      <p>Prefer a video? Download this 19-second introduction to send to a friend or a community that welcomes app recommendations.</p>
+      <video controls playsinline preload="none" width="1080" height="1920" poster="assets/daven-introduction-poster.jpg" aria-label="Daven introduction, 19 seconds" aria-describedby="video-transcript">
+        <source src="assets/daven-introduction.mp4" type="video/mp4" />
+        <a href="assets/daven-introduction.mp4">Download the Daven introduction video.</a>
+      </video>
+      <div class="cta-row">
+        <a class="btn btn--gold" href="assets/daven-introduction.mp4" download="Daven-introduction.mp4">Download video (MP4)</a>
+      </div>
+      <details>
+        <summary>Read the video text</summary>
+        <p id="video-transcript">A quieter place to daven. The daily siddur, free on iPhone. Four nusachim, ready offline: Ashkenaz, Sefard, Edot Mizrach and Chabad. No account needed to start. Daven: a free siddur for iPhone. Daily prayers. All 150 Tehillim. Download on the App Store at davenapp.com. Optional in-app purchases.</p>
+      </details>
+    </section>
     <p class="share-guide">New to Daven? <a href="siddur-for-iphone.html">See what’s free and how to get started.</a></p>
   </div>
 </main>
