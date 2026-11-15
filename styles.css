@@ -353,3 +353,51 @@ html.js .rise:not(.in) { opacity: 0; transform: translateY(12px); }
 /* A hidden success state or form must stay hidden despite display rules. */
 [hidden] { display: none !important; }
 @media (max-width: 540px) { .hero { padding-top: 36px; } }
+
+/* Search and setup guides use the same palette and type as the home page. */
+.skip-link {
+  position: absolute;
+  z-index: 60;
+  top: 12px;
+  inset-inline-start: 24px;
+  padding: 8px 14px;
+  color: var(--ink);
+  background: var(--zahav-bright);
+  transform: translateY(calc(-100% - 24px));
+}
+
+.skip-link:focus { transform: none; }
+
+.reading-nav { border-bottom: 1px solid var(--hairline); }
+.reading-nav__inner, .reading-nav nav { display: flex; align-items: center; }
+.reading-nav__inner { min-height: 64px; justify-content: space-between; gap: 18px; }
+.reading-nav nav { gap: 18px; }
+.reading-nav nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.reading-nav .nav__brand { position: static; transform: none; }
+
+.reading-page { padding-top: clamp(40px, 8vw, 84px); }
+.reading-head { padding-bottom: 24px; border-bottom: 1px solid var(--hairline-strong); }
+.reading-head h1 { font-size: clamp(36px, 6.5vw, 58px); }
+.reading-head p { margin-top: 16px; max-width: 52ch; font-size: 20px; color: var(--afor); }
+.reading-page .guide-copy { margin-top: 28px; }
+.reading-page .guide-copy a:not(.btn) { text-decoration: underline; text-underline-offset: 3px; }
+.reading-page .guide-copy ul { padding-left: 24px; }
+.reading-page .cta-row { margin-top: 28px; }
+
+.guide-watch-shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 4vw, 24px); max-width: 460px; }
+.guide-watch-shots img { border-radius: var(--radius-lg); background: var(--tzel); }
+.guide-callout { padding: 20px; background: var(--tzel); border: 1px solid var(--hairline-strong); border-radius: var(--radius-md); }
+.guide-callout h2 { margin: 0 0 10px; }
+.guide-callout p { margin: 0; }
+.zmanim-list > div { padding: 12px 0; border-bottom: 1px solid var(--hairline); }
+.zmanim-list dt { font-weight: 700; }
+.zmanim-list dd { color: var(--afor); }
+
+.reading-related { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--hairline); scroll-margin-top: 78px; }
+.reading-related h2, .reading-related h3 { font-size: 24px; }
+.guide-links { display: flex; flex-wrap: wrap; gap: 0 24px; list-style: none; margin-top: 8px; }
+.guide-links a { display: inline-flex; align-items: center; min-height: 44px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-page .btn:active { transform: none; }
+}
