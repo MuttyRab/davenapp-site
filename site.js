@@ -117,3 +117,35 @@ document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = Stri
     });
   }
 })();
+
+// Guide share links keep WhatsApp as a universal fallback. On devices with the
+// native share sheet, offer every installed sharing destination instead.
+(function guideSharing() {
+  const links = document.querySelectorAll('.guide-page a[href^="https://wa.me/?text="]');
+  if (!links.length || !navigator.share) return;
+
+  links.forEach((link) => {
+    let message;
+    try {
+      message = new URL(link.href).searchParams.get('text') || '';
+    } catch {
+      return;
+    }
+    const lines = message.split('\n');
+    const finalLine = lines[lines.length - 1];
+    const hasSharedUrl = /^https?:\/\//.test(finalLine);
+    const url = hasSharedUrl ? finalLine : window.location.href;
+    const text = hasSharedUrl ? lines.slice(0, -1).join('\n') : message;
+    const fallback = link.href;
+    link.textContent = document.documentElement.lang === 'he' ? 'שיתוף המדריך' : 'Share this guide';
+
+    link.addEventListener('click', async (event) => {
+      event.preventDefault();
+      try {
+        await navigator.share({ title: document.title.replace(/ — Daven$/, ''), text, url });
+      } catch (error) {
+        if (error.name !== 'AbortError') window.location.href = fallback;
+      }
+    });
+  });
+})();
