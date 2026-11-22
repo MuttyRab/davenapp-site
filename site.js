@@ -21,6 +21,11 @@ document.documentElement.classList.add('js');
 // Footer year.
 document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = String(new Date().getFullYear()); });
 
+// Retire dated promotions while keeping the guide available from the guide list.
+document.querySelectorAll('[data-hide-after]').forEach((element) => {
+  element.hidden = Date.now() >= Date.parse(element.dataset.hideAfter);
+});
+
 // Mobile menu: the hamburger toggles the sheet; any link tap, outside tap,
 // or Escape closes it.
 (function menu() {

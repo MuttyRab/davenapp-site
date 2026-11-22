@@ -401,3 +401,26 @@ html.js .rise:not(.in) { opacity: 0; transform: translateY(12px); }
 @media (prefers-reduced-motion: reduce) {
   .reading-page .btn:active { transform: none; }
 }
+
+.seasonal-guide { margin-top: 8px; }
+.seasonal-guide a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--zahav-bright);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.calendar-table {
+  width: 100%;
+  margin: 12px 0 16px;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.calendar-table th, .calendar-table td {
+  padding: 7px 10px;
+  text-align: start;
+  border-bottom: 1px solid var(--hairline);
+}
+.calendar-table th:last-child, .calendar-table td:last-child { text-align: end; }
+.calendar-table thead { border-bottom: 1px solid var(--hairline-strong); }
