@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=12" />
   <link rel="stylesheet" href="assets/share-video.css?v=1" />
 </head>
 <body>
@@ -55,13 +55,20 @@
       <h1>A siddur to pass along.</h1>
       <p>Someone you know could use a quieter place to daven. Send them Daven: the daily siddur and all 150 Tehillim are free.</p>
     </div>
-    <div class="share-card">
-      <img class="share-icon" src="assets/icon-512.png" width="88" height="88" alt="Daven app icon" />
-      <h2>Four nusachim. Ready offline.</h2>
-      <p>Ashkenaz, Sefard, Edot Mizrach and Chabad. A daily service that follows the Jewish calendar, with local zmanim. No account needed to start.</p>
-      <a class="btn btn--gold" href="https://apps.apple.com/app/id6791022012">Get Daven free for iPhone</a>
-      <p class="cta-note">Optional Premium features and in-app purchases. Downloading doesn’t start a subscription.</p>
-    </div>
+    <section class="share-card share-download" aria-labelledby="share-download-title">
+      <div class="share-download__details">
+        <img class="share-icon" src="assets/icon-512.png" width="72" height="72" alt="" />
+        <h2 id="share-download-title">Four nusachim. Ready offline.</h2>
+        <p>Ashkenaz, Sefard, Edot Mizrach and Chabad. A daily service that follows the Jewish calendar, with local zmanim. No account needed to start.</p>
+        <a class="btn btn--gold" href="https://apps.apple.com/app/id6791022012">Get Daven free for iPhone</a>
+        <p class="cta-note">Optional Premium features and in-app purchases.</p>
+      </div>
+      <figure class="share-download__scan" id="scan">
+        <img src="assets/daven-app-store-qr.png" width="164" height="164" alt="QR code for Daven on the App Store" />
+        <figcaption>Scan with your iPhone camera</figcaption>
+        <a href="assets/daven-app-store-qr.png" download="Daven-App-Store-QR.png">Download QR code</a>
+      </figure>
+    </section>
     <div class="share-actions">
       <h2>Make someone’s next tefillah easier</h2>
       <p>Send a personal message, or share in a community that welcomes app recommendations.</p>
@@ -70,6 +77,7 @@
       <div class="cta-row">
         <button class="btn btn--gold" type="button" data-share hidden>Share Daven</button>
         <button class="btn btn--ghost" type="button" data-copy-share hidden>Copy message</button>
+        <a class="btn btn--ghost" href="https://wa.me/?text=Daven%20is%20a%20free%20offline%20siddur%20for%20iPhone%20with%20four%20nusachim%2C%20all%20150%20Tehillim%2C%20and%20local%20zmanim.%20No%20account%20needed.%0Ahttps%3A%2F%2Fdavenapp.com%2F%3Futm_source%3Dwhatsapp%26utm_medium%3Dshare%26utm_campaign%3Dfree_siddur">Share on WhatsApp</a>
       </div>
       <p id="share-status" role="status" aria-live="polite"></p>
       <noscript><p>Select and copy the message above to share it.</p></noscript>

@@ -424,3 +424,18 @@ html.js .rise:not(.in) { opacity: 0; transform: translateY(12px); }
 }
 .calendar-table th:last-child, .calendar-table td:last-child { text-align: end; }
 .calendar-table thead { border-bottom: 1px solid var(--hairline-strong); }
+
+.desktop-install-link { display: none; }
+@media (min-width: 901px) {
+  .desktop-install-link { display: block; margin-top: 6px; }
+  .desktop-install-link a { display: inline-flex; align-items: center; min-height: 44px; }
+}
+.share-download { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px; }
+.share-download__details { display: grid; gap: 16px; justify-items: start; }
+.share-download__scan { display: grid; justify-items: center; gap: 6px; text-align: center; scroll-margin-top: 80px; }
+.share-download__scan img { width: 164px; height: auto; }
+.share-download__scan figcaption { color: var(--afor); }
+.share-download__scan a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 540px) {
+  .share-download { grid-template-columns: 1fr; }
+}
